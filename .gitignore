@@ -1,0 +1,5 @@
+.ignore
+docker-compose.yml
+ecs-params.yml
+node_modules
+package-lock.json

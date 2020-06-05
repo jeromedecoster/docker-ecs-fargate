@@ -1,0 +1,12 @@
+version: '3'
+services:
+  site:
+    image: {{USER}}.dkr.ecr.eu-west-3.amazonaws.com/ecs-fargate
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs     
+      options: 
+        awslogs-group: ecs-fargate-cli
+        awslogs-region: eu-west-3
+        awslogs-stream-prefix: site

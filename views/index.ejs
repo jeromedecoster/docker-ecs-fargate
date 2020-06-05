@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squirrel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Squirrel</h1>
+
+    <img src="img/squirrel-2.jpg">
+    <!-- https://unsplash.com/photos/wN6EybHR2x8 -->
+    <!-- https://unsplash.com/photos/V8XwPL75hCw -->
+    <!-- https://unsplash.com/photos/QwdFTL1tZR0 -->
+
+    <% if (locals.settings.env == 'development') { %>
+    <footer><u>development</u> version: <%- locals.version %></footer>
+    <% } else { %>
+    <footer>version: <%- locals.version %></footer>
+    <% } %>
+
+    <!-- < %- JSON.stringify(locals) %> -->
+    <% if (locals.settings.env == 'development') { %>
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    <% } %>
+
+</body>
+
+</html>

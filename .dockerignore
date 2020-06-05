@@ -1,0 +1,8 @@
+# exclude everything
+*
+
+# then include
+!public
+!views
+!index.js
+!package.json
